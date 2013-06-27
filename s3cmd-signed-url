@@ -58,7 +58,7 @@ while getopts "hb:o:a:s:" OPT; do
             S3_OBJECT="${OPTARG}"
             ;;
         a)
-            S3_API_KEY="${OPTARG}"
+            S3_ACCESS_KEY="${OPTARG}"
             ;;
         s)
             SECONDS="${OPTARG}"
