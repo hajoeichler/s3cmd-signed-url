@@ -6,7 +6,7 @@ set -e
 
 usage() {
     echo "$(basename ${0}) -b bucket -o object_uri_part [-a access_key] [-s seconds]"
-    echo "- a script to created signed urls for private objects in a S3 bucket."
+    echo "- a script to create temporary signed urls for private objects in a S3 bucket."
     echo ""
     echo "Options:"
     echo "  -b bucket_name: S3 Bucket"
