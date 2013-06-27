@@ -29,7 +29,7 @@ create_signed_url() {
     # string to sign: GET + expiration-time + bucket/object
     local can_string="GET\n\n\n${TIMESTAMP}\n/${S3_BUCKET}/${S3_OBJECT}"
     # generate the signature
-    SIGNATURE=$(./s3cmd sign "$(echo -e "$can_string")" | sed -n 's/^Signature: //p')
+    SIGNATURE=$(s3cmd sign "$(echo -e "$can_string")" | sed -n 's/^Signature: //p')
     if [ -z "$SIGNATURE" ]; then
         echo "Failed to created signed URL for '${S3_OBJECT}' in bucket '${S3_BUCKET}'" >&2
         exit 4
