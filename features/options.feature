@@ -1,9 +1,9 @@
 Feature: Checking command line options
 
-  Scenario: No access key provided
-    When I run `s3cmd-signed-url`
-    Then the exit status should be 1
-    And the output should contain "Please provide your S3 access key."
+#  Scenario: No access key provided
+#    When I run `s3cmd-signed-url`
+#    Then the exit status should be 1
+#    And the output should contain "Please provide your S3 access key."
 
   Scenario: No bucket given
     When I run `s3cmd-signed-url -a 123`
