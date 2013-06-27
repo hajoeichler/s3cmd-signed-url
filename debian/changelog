@@ -1,0 +1,5 @@
+s3cmd-signed-url (0.0.1) unstable; urgency=low
+
+  * First release of s3cmd-signed-url
+
+ -- Hajo Eichler <eichler.hajo@gmail.com>  Thu, 27 Jun 2013 13:31:07 +0200

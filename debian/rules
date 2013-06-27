@@ -1,0 +1,7 @@
+#! /usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_install:
+	mkdir -p $$(pwd)/debian/s3cmd-signed-url/usr/local/bin/
+	cp s3cmd-signed-url $$(pwd)/debian/s3cmd-signed-url/usr/local/bin/

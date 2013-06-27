@@ -1,0 +1,11 @@
+Source: s3cmd-signed-url
+Maintainer: Hajo Eichler <eichler.hajo@gmail.com>
+Section: misc
+Priority: optional
+Build-Depends: debhelper (>= 8)
+
+Package: s3cmd-signed-url
+Architecture: all
+Depends: ${misc:Depends}
+Description: Create signed urls for objects in S3 buckets
+  Signed URLs grant temporary access to objects in private S3 buckets.
