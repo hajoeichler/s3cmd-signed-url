@@ -3,5 +3,5 @@
 	dh $@
 
 override_dh_auto_install:
-	mkdir -p $$(pwd)/debian/s3cmd-signed-url/usr/local/bin/
-	cp s3cmd-signed-url $$(pwd)/debian/s3cmd-signed-url/usr/local/bin/
+	mkdir -p $$(pwd)/debian/s3cmd-signed-url/usr/bin/
+	cp s3cmd-signed-url $$(pwd)/debian/s3cmd-signed-url/usr/bin/
