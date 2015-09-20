@@ -15,6 +15,7 @@ The `s3cmd-signed-url` depends on [s3cmd](http://s3tools.org/s3cmd).
 
     -b bucket_name: bucket name (example: my-bucket)
     -o object_uri: URI part of object in S3 bucket (example: somefolder/somefile.ext)
+    -m http_method: HTTP method to sign - e.g. PUT (default GET)
     -a access_key: S3 Access Key (default ${S3_ACCESS_KEY})
     -s seconds: how long the signed url will be valid (default 3600)
     -h: see this usage information
