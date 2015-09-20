@@ -1,3 +1,9 @@
+s3cmd-signed-url (0.0.2) unstable; urgency=low
+
+  * Support setting HTTP method via -m option
+
+ -- Hajo Eichler <eichler.hajo@gmail.com>  Sun, 20 Sep 2015 19:48:31 +0200
+
 s3cmd-signed-url (0.0.1) unstable; urgency=low
 
   * First release of s3cmd-signed-url
