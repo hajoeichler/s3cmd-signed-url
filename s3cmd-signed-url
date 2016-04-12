@@ -24,6 +24,13 @@ set_access_key() {
     fi
 }
 
+set_host_base() {
+    # extract host base from .s3cfg
+    if [ -e "${HOME}/.s3cfg" ]; then
+        S3_HOST_BASE=$(sed -n 's/^host_base = //p' "${HOME}/.s3cfg")
+    fi
+}
+
 create_signed_url() {
     # 1-hour expiration
     TIMESTAMP=$((`date +%s` + ${SECONDS}))
@@ -38,12 +45,13 @@ create_signed_url() {
 }
 
 output() {
-    local base_url="https://${S3_BUCKET}.s3.amazonaws.com/${S3_OBJECT}"
+    local base_url="https://${S3_BUCKET}.${S3_HOST_BASE}/${S3_OBJECT}"
     local params="AWSAccessKeyId=${S3_ACCESS_KEY}&Expires=${TIMESTAMP}&Signature=${SIGNATURE}"
     echo "$base_url?$params"
 }
 
 set_access_key
+set_host_base
 SECONDS=3600
 S3_HTTP_METHOD="GET"
 
